@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hemnav
+Version: 0.0.1
+Summary: Hem NAV API
+Home-page: https://github.com/hemdesignstudio/hemnav
+Author: Albin Winkelmann
+Author-email: albin@hem.com
+License: UNKNOWN
+Description: # hemnav
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
