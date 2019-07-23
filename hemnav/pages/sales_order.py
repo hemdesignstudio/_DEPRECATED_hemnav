@@ -1,7 +1,7 @@
 """Sales Order Module
 
 """
-from hemnav.base import NAVBase
+from ..base import NAVBase
 
 SERVICE_NAME = "SalesOrderWS"
 

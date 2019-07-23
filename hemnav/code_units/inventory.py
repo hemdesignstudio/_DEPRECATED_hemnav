@@ -1,7 +1,7 @@
 """ Inventory Module
 
 """
-from hemnav.base import NAVBase
+from ..base import NAVBase
 import datetime
 
 SERVICE_NAME = "GetInventory"

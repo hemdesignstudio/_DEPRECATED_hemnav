@@ -1,5 +1,5 @@
 from unittest import TestCase
-from base import NAVBase, RegionEnum
+from ..base import NAVBase, RegionEnum
 from doubles import allow, expect
 import zeep
 
