@@ -7,7 +7,7 @@ for all classes related to Microsoft Navision Integration
 import datetime
 import zeep
 
-from settings import Settings, RegionEnum
+from .settings import Settings, RegionEnum
 from requests import Session
 from requests.auth import HTTPBasicAuth
 from zeep.transports import Transport
