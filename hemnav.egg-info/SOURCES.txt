@@ -6,6 +6,7 @@ hemnav/settings.py
 hemnav.egg-info/PKG-INFO
 hemnav.egg-info/SOURCES.txt
 hemnav.egg-info/dependency_links.txt
+hemnav.egg-info/requires.txt
 hemnav.egg-info/top_level.txt
 hemnav/code_units/__init__.py
 hemnav/code_units/inventory.py
