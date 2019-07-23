@@ -1,0 +1,20 @@
+dev:
+  base_url: "https://wsmyway473.navmoln.se:47301/MyWay473Services/WS/"
+  eu:
+    store_name: "Hem FAL Sweden AB"
+  us:
+    store_name: "Hem FAL Inc"
+
+test:
+  base_url: "https://wsmyway473.navmoln.se:47301/MyWay473Services/WS/"
+  eu:
+    store_name: "Hem FAL Sweden AB"
+  us:
+    store_name: "Hem FAL Inc"
+
+prod:
+  base_url: "https://wsmyway473.navmoln.se:47301/MyWay473Services/WS/"
+  eu:
+    store_name: "Hem FAL Sweden AB"
+  us:
+    store_name: "Hem FAL Inc"
