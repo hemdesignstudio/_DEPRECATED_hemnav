@@ -32,7 +32,3 @@ class Settings:
         self.store_name = config[environment][region.value]["store_name"].replace(
             " ", "%20"
         )
-
-
-if __name__ == "__main__":
-    Settings()
