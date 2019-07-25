@@ -46,7 +46,6 @@ class NAVBase:
         client_url += settings.store_name
         client_url += "/Codeunit" if code_unit else "/Page"
         client_url += "/{endpoint_name}".format(endpoint_name=service_endpoint_name)
-        print(client_url)
         self._client = zeep.Client(client_url, transport=Transport(session=session))
 
     def _where(self, query: dict) -> list:
