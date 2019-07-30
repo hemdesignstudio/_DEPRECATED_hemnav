@@ -1,6 +1,6 @@
 # Hemnav
 
-Hem NAV API package.
+Hem NAV API package. [![CircleCI](https://circleci.com/gh/hemdesignstudio/hemnav.svg?style=svg)](https://circleci.com/gh/hemdesignstudio/hemnav)
 
 ## Package installation
 Having this package in the Pipfile and running `pipenv install` is not sufficient since that will not install dependencies. One has to run `pipenv install -e git+https://github.com/hemdesignstudio/hemnav@<version>#egg=hemnav` where `<version>` is the wanted version (git tags).
