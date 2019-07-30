@@ -6,16 +6,14 @@ import zeep
 
 class NAVBaseTestCase(TestCase):
     def test_region_parameter(self):
-        allow(zeep).Client.and_return("")
-        wrapper = NAVBase(RegionEnum.EU, "")
+        wrapper = NAVBase(RegionEnum.EU, "GetInventory")
         self.assertEqual(wrapper._region, RegionEnum.EU)
 
-        wrapper = NAVBase(RegionEnum.US, "")
+        wrapper = NAVBase(RegionEnum.US, "GetInventory")
         self.assertEqual(wrapper._region, RegionEnum.US)
 
         with self.assertRaises(AttributeError):
             NAVBase(RegionEnum.UK, "")
-        teardown()
 
     def test_service_name(self):
         allow(zeep).Client.and_return("")
