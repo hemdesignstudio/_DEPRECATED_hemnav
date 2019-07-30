@@ -44,3 +44,9 @@ Install dependencies:
 ## Development
 To run tests, run:
 `$ python -m unittest`
+
+To run tests with coverage:
+`$ coverage run -m unittest`
+
+To see coverage resulst:
+`$ coverage report`
