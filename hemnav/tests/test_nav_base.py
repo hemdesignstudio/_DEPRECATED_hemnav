@@ -1,6 +1,6 @@
 from unittest import TestCase
 from hemnav.base import NAVBase, RegionEnum
-from doubles import allow, expect
+from doubles import allow, teardown
 import zeep
 
 
@@ -15,8 +15,10 @@ class NAVBaseTestCase(TestCase):
 
         with self.assertRaises(AttributeError):
             NAVBase(RegionEnum.UK, "")
+        teardown()
 
     def test_service_name(self):
         allow(zeep).Client.and_return("")
         wrapper = NAVBase(RegionEnum.EU, "TestName")
         self.assertEqual(wrapper._service_name, "TestName")
+        teardown()
