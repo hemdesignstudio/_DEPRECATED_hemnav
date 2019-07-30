@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 pylint = "<2.0.0"
 coverage = "*"
+pre-commit = "*"
 
 [packages]
 zeep = ">=3.4.*"
