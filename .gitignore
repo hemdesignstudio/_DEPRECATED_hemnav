@@ -47,3 +47,4 @@ __Pycache__
 *.code-workspace
 .vscode/settings.json
 coverage*
+.coverage
