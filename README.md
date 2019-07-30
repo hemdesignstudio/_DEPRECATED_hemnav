@@ -36,17 +36,40 @@ prod:
 
 ## Install everything
 Create the virtual environment:
-`$ pipenv shell`
+```sh
+$ pipenv shell
+```
 
 Install dependencies:
-`$ pipenv install`
+```sh
+$ pipenv install
+```
 
 ## Development
 To run tests, run:
-`$ python -m unittest`
+```sh
+$ python -m unittest
+```
 
 To run tests with coverage:
-`$ coverage run -m unittest`
+```sh
+$ coverage run -m unittest
+```
 
 To see coverage resulst:
-`$ coverage report`
+```sh
+$ coverage report
+```
+
+## Releasing new versions of hemnav
+To release a new version of hemnav you first have to create a tag (a github release).
+You can read about tags here: https://git-scm.com/book/en/v2/Git-Basics-Tagging
+
+Package your new version using this commnad:
+```sh
+$ python setup.py sdist
+```
+Release your new version using this command:
+```sh
+$ git tag -a v0.1.0 -m "Super short version description"
+```
