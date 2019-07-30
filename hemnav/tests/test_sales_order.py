@@ -7,6 +7,15 @@ TEST_DOCUMENT_NO = "TEST_SALES_ORDER"
 
 
 class SalesOrderTestCase(TestCase):
+    def test_create_sales_order(self):
+        # Create a NAV sales order using a sales order dict
+        sales_order = {"No": "TEST"}
+
+        sales_order_client = SalesOrder(RegionEnum.EU)
+        order = sales_order_client.create(sales_order)
+        self.assertEqual(order["No"], sales_order["No"])
+        sales_order_client._delete(order["Key"])
+
     def test_where(self):
         # On something that exists
         sales_order_client = SalesOrder(RegionEnum.EU)
