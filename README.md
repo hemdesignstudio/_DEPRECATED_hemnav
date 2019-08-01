@@ -11,21 +11,21 @@ Create a `config.yml` file in the root of your app-directory. Here's an example 
 
 ```
 dev:
-  base_url: "https://wsmyway473.navmoln.se:47301/MyWay473Services/WS/"
+  base_url: ""
   eu:
     store_name: "Hem FAL Sweden AB"
   us:
     store_name: "Hem FAL Inc"
 
 test:
-  base_url: "https://wsmyway473.navmoln.se:47301/MyWay473Services/WS/"
+  base_url: ""
   eu:
     store_name: "Hem FAL Sweden AB"
   us:
     store_name: "Hem FAL Inc"
 
 prod:
-  base_url: "https://wsmyway473.navmoln.se:47301/MyWay473Services/WS/"
+  base_url: ""
   eu:
     store_name: "Hem FAL Sweden AB"
   us:
