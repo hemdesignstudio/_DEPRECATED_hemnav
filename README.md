@@ -75,3 +75,7 @@ Release your new version using this command:
 ```sh
 $ git tag -a <the new version> -m "Super short version description"
 ```
+Push release to git
+```sh
+$ git push origin v0.1.0
+```
