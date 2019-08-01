@@ -43,6 +43,8 @@ ehthumbs.db
 __Pycache__
 
 ######################
-*.env
+.env
 *.code-workspace
 .vscode/settings.json
+coverage*
+.coverage

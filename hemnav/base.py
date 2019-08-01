@@ -1,24 +1,23 @@
-# -*- coding: utf-8 -*-
 """Nav Base Module
 
 Module Contains NAVWrapper which is the base class
 for all classes related to Microsoft Navision Integration
 """
-import datetime
 import zeep
 
 from .settings import Settings, RegionEnum
 from requests import Session
 from requests.auth import HTTPBasicAuth
 from zeep.transports import Transport
-from enum import Enum
 
 
 class NAVBase:
     """A simple NAV wrapper that creates a client based on region
     """
 
-    def __init__(self, region, service_endpoint_name, code_unit=True):
+    def __init__(
+        self, region: RegionEnum, service_endpoint_name, code_unit=True
+    ):
         """Constructor method of nav base creates an instance of soap
         client(Zeep) based on endpoint name for Microsoft Navision.
         The client will be inherited and used by all subclasses of this class.
@@ -40,14 +39,19 @@ class NAVBase:
         settings = Settings(region)
         session = Session()
 
-        session.auth = HTTPBasicAuth(settings.nav_username, settings.nav_password)
+        session.auth = HTTPBasicAuth(
+            settings.nav_username, settings.nav_password
+        )
 
         client_url = settings.base_url
         client_url += settings.store_name
         client_url += "/Codeunit" if code_unit else "/Page"
-        client_url += "/{endpoint_name}".format(endpoint_name=service_endpoint_name)
-        print(client_url)
-        self._client = zeep.Client(client_url, transport=Transport(session=session))
+        client_url += "/{endpoint_name}".format(
+            endpoint_name=service_endpoint_name
+        )
+        self._client = zeep.Client(
+            client_url, transport=Transport(session=session)
+        )
 
     def _where(self, query: dict) -> list:
         """Method abstracts SOAP action (ReadMultiple) returns one or more
@@ -60,10 +64,15 @@ class NAVBase:
         """
 
         filter_query = list(
-            map(lambda key: {"Field": key, "Criteria": query[key]}, query.keys())
+            map(
+                lambda key: {"Field": key, "Criteria": query[key]},
+                query.keys(),
+            )
         )
 
-        return self._client.service.ReadMultiple(filter=filter_query, setSize=0)
+        return self._client.service.ReadMultiple(
+            filter=filter_query, setSize=0
+        )
 
     def _create(self, fields: dict) -> dict:
         """Method abstracts SOAP action (Create) which is used to create entities
@@ -105,3 +114,15 @@ class NAVBase:
         list_field = "_".join([self._service_name, "List"])
         nav_object = {list_field: {self._service_name: fields}}
         return self._client.service.UpdateMultiple(**nav_object)
+
+    def _delete(self, key: str):
+        """Method abstracts SOAP action (Delete) which is used to Delete an entity
+        in NAV
+
+        Args:
+            key (str): NAV entity key
+
+        Returns:
+            bool: True if deletion was successful
+        """
+        return self._client.service.Delete(key)

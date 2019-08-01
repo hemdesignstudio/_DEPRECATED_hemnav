@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="hemnav",
-    version="0.0.1",
+    version="0.1.0",
     author="Albin Winkelmann",
     author_email="albin@hem.com",
     description="Hem NAV API",

@@ -11,6 +11,12 @@ hemnav.egg-info/top_level.txt
 hemnav/code_units/__init__.py
 hemnav/code_units/inventory.py
 hemnav/pages/__init__.py
+hemnav/pages/customer_card.py
 hemnav/pages/sales_order.py
+hemnav/pages/vat_business_posting_group.py
+hemnav/pages/vat_posting_setup.py
 hemnav/tests/__init__.py
+hemnav/tests/test_customer_card.py
+hemnav/tests/test_inventory.py
 hemnav/tests/test_nav_base.py
+hemnav/tests/test_sales_order.py
